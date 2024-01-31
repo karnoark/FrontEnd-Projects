@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f4;
+    margin: 20px 10px;
+    background-image: url(../media/meetup.jpg);
+    background-size: cover;
+}
+
+.sidebar{
+    float: left;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 5px grey;
+    transition: 0.5s;
+    overflow-x: hidden;
+    position: relative;
+    top: 0;
+    left: -335;
+}
+
+.sidebar > *{
+    margin: 30px 100px 10px 10px;
+    box-shadow: 5px 5px 5px grey;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.toggle-btn{
+    margin-left: 80px;
+    transform: scale(1);
+    transition: transform 3s ease-out;
+}
+
+.sidebar .meetUp{
+    margin-top: 5px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.sidebar div:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+.sidebar-open {
+    width: 250px;
+    left: 0;
+}
+
+.togglled{
+    transform: scale(8);
+}

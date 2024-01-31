@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="index.js" defer></script>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2>Login Page</h2>
+        </div>
+        <div class="form-body">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                <span id="emailError" class="error" style="color: red; font-size: small;"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" placeholder="Enter your password">
+                <span id="passwordError" class="error" style="color: red; font-size: small;"></span>
+            </div>
+            <div class="form-group">
+                <label for="mytime">Select Time:</label>
+                <input type="time" id="mytime">
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

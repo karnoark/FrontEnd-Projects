@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 0; /* Default z-index */
+    /* background-color: #2C3E50; */
+    background: linear-gradient(to bottom, #3f72ec 40%, #D3D3D3 40%, #D3D3D3 60%, #F0EDE5 60%);
+}
+
+.circle {
+    /* position of circle relative to card */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* properties of circle */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 55, 255);
+    /* Background image */
+    background-image: url(../elon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right 0.2px;
+    z-index: 2; /* Higher z-index */
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid #D3D3D3; /* Light Gray color - Inside portion of the border */
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .bio{
+    position: relative;
+    top: 45%;
+    text-align: center;
+
+  }
+
+  .bio h2{
+    box-sizing: border-box;
+    margin: 15 0 5px 0;
+  }
+
+  .bio h3{
+    box-sizing: border-box;
+    margin:5px 0 0 0;
+  }
+
+  .bio .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 35px 0 35px;
+}
+
+.bio .icons svg {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-top: 10px;
+    margin-right: 3px; /* Adjust the margin between icons */
+}
+
+.bio h4{
+    display: inline-block;
+    margin: 20px 20px;
+    padding: 5px 10px;
+    color: white;
+    background: #3f72ec;
+}
+
+h4:first-child {
+    border-right: 2px solid #333;
+}

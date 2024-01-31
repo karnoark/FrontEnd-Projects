@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #121320; */
+    background-color: #1d1e3f;
+
+}
+
+.back_circle1{
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    height:180px;
+    width: 180px;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    z-index: -1;
+    background: linear-gradient(to right, #ffebf2, #e10f9b);}
+
+.back_circle2{
+    position: absolute;
+    right: 30px;
+    bottom: 80px;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    z-index: -1;
+    background: linear-gradient(to right, #e10f9b , #ffebf2);}
+
+.card{
+    position: absolute;
+    height: 180px;
+    width: 330px;
+    border-radius: 20px;
+    /* border: 2px solid black; */
+    padding:10px 20px;
+    /* background-color: rgb(103,92,113,0.5); 
+    */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    backface-visibility: hidden;
+    transition: 6sec;
+    transform-style: preserve-3d;
+    /* transform:rotateY(180deg); */
+}
+
+.back_circle1::before{
+    content:" ";
+    position: absolute;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    transform: translate(10px, 10px);
+    background:linear-gradient(to right, #1d1e3f, #e10f9b);
+}
+
+.back_circle2::after{
+    content:" ";
+    position: absolute;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    transform: translate(70px, 70px);
+    background:linear-gradient(to right, #1d1e3f, #e10f9b);
+
+}
+
+.card .upper_content{
+    display:flex;
+    justify-content:space-between;
+}
+
+.upper_content .master_card{
+    display: flex;
+    margin-left: 5px;
+}
+
+.upper_content .logo, .card_name{
+    display: flex;
+    /* margin-right: 10px; */
+}
+
+.upper_content .chip{
+    height:25px;
+    width:auto;
+}
+
+.logo .circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    opacity: 0.8;
+}
+
+.logo .circle2{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color:orange;
+    opacity: 0.6;
+    position: relative;
+    right: 5px;
+}
+
+.card .middle_content{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle_content .card_number{
+    font-size: 11px;
+}
+
+.middle_content .number{
+    font-size: 15px;
+}
+
+.card .lower_content{
+    margin-top: 15px;
+}
+
+.card .corner_content{
+    position:relative;
+    bottom: 45px;
+    left: 200px;
+}
+
+.corner_content .validity{
+    font-size: 11px;
+}
+
+.corner_content .date{
+    font-size: 14px;
+}
+
+.card.back-face{
+    border:none;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+}
+
+.card.back-face h6{
+    font-size: 8px;
+}
+
+.card.back-face .magnetic-strip{
+    position: absolute;
+    top:35px;
+    left:0;
+    height:45px;
+    width: 100%;
+    background-color: black;
+}
+
+.card.back-face .signature{
+    margin-top: 40px;
+    width: 85%;
+    height: 40px;
+    background: repeating-linear-gradient(#fff, #fff 3px, #efefef 0px, #efefef 9px);
+    border-radius: 6px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signature i{
+    font-size: 12px;
+    color: black;
+    margin-right: -30px;
+    background-color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.card.back-face h5{
+    font-size: 8px;
+    margin-top: 15px;
+}
+
+.card:hover{
+    
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #c8e8e9;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* border: 2px solid black; */
+    box-shadow: 0 5px 10px (0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container .message-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.message-field h6{
+    font-weight: 400;
+}
+
+.message-field .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.message-field .input-box input, .message-field .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #F0F1F8;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.message-field .message-box{
+    min-height: 110px;
+}
+
+.message-field button{
+    width: 80px;
+    color: white;
+    background: #3e2093;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+
+.container .contact-field{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 40%;
+    position: relative;
+}
+
+.contact-field > *{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.contact-field span{
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.contact-field i{
+    font-size: 20px;
+    color: #3e2093;
+}
+
+.container .contact-field::before{
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 2px;
+    right: 10px;   
+    background: #afafb6;
+    transform: translateY(4%);
+}
+
+@media (max-width: 797px){
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .container .contact-field{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container .contact-field::before{
+        display: none;
+    }
+
+    .container .message-field{
+        width: 100%;
+        margin-left: 0;
+    }
+}
